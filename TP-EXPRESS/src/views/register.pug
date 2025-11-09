@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .max-w-md.mx-auto.mt-20.bg-white.p-6.rounded.shadow
+    h2.text-2xl.font-bold.mb-4.text-center Register
+    form(action="/register" method="POST")
+      input(type="text" name="username" placeholder="Username" required).w-full.mb-3.p-2.border.rounded
+      input(type="email" name="email" placeholder="Email" required).w-full.mb-3.p-2.border.rounded
+      input(type="password" name="password" placeholder="Password" required).w-full.mb-4.p-2.border.rounded
+      button(type="submit").bg-blue-500.text-white.px-4.py-2.rounded.w-full  Register
+    p.text-center.mt-4
+      | Already registered? 
+      a.text-blue-500(href="/login") Login here
